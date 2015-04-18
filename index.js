@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public', { maxAge: 7200000 }));
 var imagename=1;
 var ext=".jpg";
 function getimage() {
-	// imagename=parseInt(1 + ((Date().getTime()-1429254000000)/86400000));
+	imagename=parseInt(1 + ((new Date().getTime()-1429254000000)/86400000));
 	imagename=imagename>64?1:imagename;
 	return {bgurl:imagename+ext};
 }
